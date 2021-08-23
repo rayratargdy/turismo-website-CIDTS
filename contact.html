@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel= "stylesheet" href = navbar.css> 
+    <title>Amsterdam</title>
+</head>
+<body>
+    <header>
+        <div id="imagem"></div>
+        <div id="linha"></div>
+        <h1 class="logo" href="/">Amsterdam</h1>
+        <h3 class="sub">My Fav Places</h3>
+        <nav>
+            <ul class="navbar">
+                <li><a class="active" href="amsterdamhome.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="creator.html">Creator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+       </header>
+       <div id="get">Get in Touch</div>
+        <form class="formBox">
+            <div class="formBoxName">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Name"/>
+            </div>
+            <div class="formBoxEmail">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" placeholder="E-mail"/>
+            </div>
+            <div class="formBoxMessage">
+                <label for="message">Message</label>
+                <input type="text" id="message" cols="30" rows="10" placeholder="Message"/>
+            </div>
+            <div class="botao">
+                <button id="btn">Submit</button>
+            </div>
+        </form>
+    <script>
+        let dado = []; //Nome, email, mensagem
+        const addDados = (ev)=>{
+            ev.preventDefault();  //para evitar a perda de dados 
+            var data = new Date () //adiciona a hora do input de dados 
+            var hora = data.getHours()
+            var minu = data.getMinutes()
+
+            let dados = {
+                id: `${hora}:${minu}`,
+                Name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById("message").value
+            }
+            dado.push(dados);
+            document.forms[0].reset(); // limpar o formulario para outro input 
+            //document.querySelector('form').reset();
+
+            //imprimindo no console 
+           // console.log('MeusDados', JSON.stringify(dado) );
+            console.log("MeusDados", JSON.stringify(dado, null, 2));  //IMPRIME UM ABAIXO DO OUTRO 
+            window.alert("Envio bem sucedido")
+
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{ //evento de click no botao 
+            document.getElementById('btn').addEventListener('click', addDados);
+        });
+    </script>
+    <footer id="footercontact"> <!--Copyrigth-->
+        &copy; Rayra Pereira, 2021
+    </footer>
+</body>
+</html>

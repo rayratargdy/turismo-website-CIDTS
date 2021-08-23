@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amsterdam</title>
+    <link rel= "stylesheet" href = navbar.css> 
+</head>
+<body>
+    <header>
+        <div id="imagem"></div>
+        <div id="linha"></div>
+        <nav> 
+            <h1 class="logo" href="/">Amsterdam</h1>
+            <h3 class="sub">My Fav Places</h3>
+            <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+            </div>
+            <ul class="navbar">
+                <li><a class="active" href="amsterdamhome.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="creator.html">Creator</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="content">
+        <p>Thinking about traveling on vacation or just wanting to experience new cities and cultures from the  comfort of your Home Office? 
+            Well, thinking about the two cases I created this Website inspired by one of the places I love most in the world, Amsterdam. Here 
+            you will get to know a little of this city so cozy and beautiful! So without further ado here it is, My Favorite Places in Amsterdam!</p>
+            <blockquote id="parte1">
+                <img class="ra" src="parque.jpg"> 
+                <p id=contentparque>
+                    <h4 id="titleparque">Rijksmuseum </h4>
+                    The famous museum is the most visited in Holland and also the biggest, it's like the Louvre in Amsterdam. 
+                    In its installations there are hundreds of paintings, including Rembrandt's famous Night Watch. For those who love history,
+                    culture and art, a visit to the Rijksmuseum is certainly a must.
+                    </p> 
+            </blockquote>
+            <blockquote id="parte2">
+                <img class="dam" src="damzinho.jpg"> 
+                <p id=contentdam>
+                    <h4 id="titledam">Dam Square and the Royal Palace</h4>
+                    Dam Square is located right in the center of the city. Possibly 90% of visitors who pass through Amsterdam end up visiting the square, 
+                    even if unintentionally. Over there, there is also the Royal Palace which, despite not being the official residence of the King, is still 
+                    one of the residences of royalty. The palace is open for visits and offers a tour to discover its medieval details and the beautiful paintings 
+                    that are preserved in this beautiful monument. It's a great experience for history lovers.
+                    </p>
+            </blockquote>
+            <blockquote id="parte3">
+                <img class="beijo" src="beijo.png"> 
+                <p id=contentbeijo>
+                    <h4 id="titlebeijo">Begijnhof</h4>
+                    In the Spui square there is a small door that leads to a “residence” very popular among visitors to the capital of the Netherlands. Behind that door
+                    is a spectacular and silent garden with houses dating back to the 17th and 18th centuries. Truly, it looks like that little place has stopped in time,
+                    simply spectacular.
+                </p>
+            </blockquote>
+            <blockquote id="parte4">
+                <img class="red" src="red.jpg"> 
+                <p id=contentred>
+                    <h4 id="titlered">Red Light District</h4>
+                    Amsterdam's famous Red Light district is world renowned, and perhaps the most popular among many tourists visiting the capital of the Netherlands. 
+                    The red fluorescent lights present in several windows in this part of the city are a hallmark of the place. Perfect for a night on the town!
+                </p> 
+            </blockquote>
+            <blockquote id="parte5">
+                <img class="museu" src="moseor.jpg"> 
+                <p id=contentmuseu>
+                    <h4 id="titlemuseu">Van Gogh Museum</h4>
+                    Speaking of culture and art, here's another Amsterdam tourist spot that can't be missing from your list: Van Gogh Museum. It is home to approximately 
+                    200 paintings by the painter, and where the most famous of his works are housed. A nice tip for those visiting the museum is also to take a few minutes 
+                    to visit the souvenir shop and collect several souvenirs back home!
+                </p>
+            </blockquote>
+    </main>
+    <script>
+    //JAVA SCRIPT 
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementsByClassName("navbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        }else {
+            navbar.classList.remove("sticky");
+         }
+    }
+    </script>
+     <footer id="footerhome"> <!--Copyrigth-->
+        &copy; Rayra Pereira, 2021
+    </footer>
+</body>
+</html>
